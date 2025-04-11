@@ -68,12 +68,36 @@ main{
 
 /* メインコンテンツ共通CSS */
 .wrapper{
-    width: 60%;
-    padding: 0 20px;
+    width: 75%;
+    padding: 80px 20px;
     margin: 0 auto;
 }
 
+.sec-title{
+    margin: 0 0 50px 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.sec-title::before,
+.sec-title::after{
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    background-color: #fff;
+}
+.sec-title::before{
+    margin-right: 20px;
+}
+.sec-title::after{
+    margin-left: 20px;
+}
+
+#project{
+    background: linear-gradient(to bottom, rgb(0, 0, 0,0), rgba(0, 0, 0, 0.8));
+}
 .project-img{
+    margin: 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
@@ -82,7 +106,21 @@ main{
 ul.project-img li{
     width: calc(50% - calc(var(--gap) / 2)); /* 2列でギャップを考慮 */
     box-sizing: border-box;
+    position: relative;
+    border:1px solid #fff;
 }
+
+/* 写真の飾りつけ */
+ul.project-img li::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    box-shadow: inset 0 -30px 15px -1px #121212;
+    z-index: 1;
+  }
+
 .project-img li a img{
     width: 100%;
     height: auto;
@@ -90,6 +128,20 @@ ul.project-img li{
 }
 
 
+.pro-name{
+    font-size: 0.75rem !important;
+    margin: 0;
+    position: absolute;
+    bottom: 0px;
+    color: #fff;
+    font-size: 1rem;
+    padding-left: 8px;
+    z-index: 2;
+}
+
+#feature{
+    background-color: rgb(0, 0, 0,0.8);
+}
 /* responsive */
 @media (max-width: 375px) {
    
