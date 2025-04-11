@@ -22,14 +22,20 @@ main{
     margin: 0;
 }
 
+/* CSS変数 */
+:root{
+    --gap: 2vw;
+}
+
 .container{
     display: flex;
+    justify-content: space-between;
 }
 
 /* side header menu */
 #header{
-    width: 300px;
-    padding: 0 20px;
+    width: 40%;
+    padding: 20px 40px;
     background-color: #fff;
     box-sizing: border-box;
 }
@@ -44,7 +50,7 @@ main{
     padding: 5px 0;
 }
 .sns-menu{
-    padding: 0;
+    padding:0;
 }
 .sns-menu li{
     padding: 5px 0;
@@ -62,11 +68,26 @@ main{
 
 /* メインコンテンツ共通CSS */
 .wrapper{
-    width: 900px;
+    width: 60%;
     padding: 0 20px;
     margin: 0 auto;
 }
 
+.project-img{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+ul.project-img li{
+    width: calc(50% - calc(var(--gap) / 2)); /* 2列でギャップを考慮 */
+    box-sizing: border-box;
+}
+.project-img li a img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 
 /* responsive */
