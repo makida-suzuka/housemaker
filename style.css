@@ -151,7 +151,7 @@ ul.project-img li::after{
     justify-content: space-between;
 }
 .feature-list li{
-    width: calc((100% - 2 * var(--gap)) / 3.2);
+    width: calc(100% - calc(2 * --gap));
     text-align: center;
 }
 a.feature-text{
@@ -206,7 +206,7 @@ a.feature-text span{
     padding: 0;
 }
 .flowchart{
-    margin: 0 auto;
+    margin:0 30px;
     width: 100%;
     padding: 0;
     z-index: 1;
@@ -243,6 +243,78 @@ a.feature-text span{
     margin-bottom: 0;
 }
 
+.flow-text dt{
+    display: flex;
+    margin-left: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #121212;
+    font-size: 1.2rem;
+}
+.circle_number{
+    color: #ffffff;
+    width: 5%;
+    aspect-ratio: 1 / 1;
+    /* margin-right: 15px;
+    margin-bottom: 5px;
+    padding-top: 13px; */
+    background-color: #121212;
+    border-radius: 50%;
+    text-align: center;
+    box-sizing: border-box;
+}
+.flow-text{
+    margin: 0;
+}
+.flow-text dt span{
+    margin-left: 20px;
+}
+.flow-text dd{
+    margin-bottom: 20px;
+}
+.flow-info{
+    margin: 20px 0 65px 30px;
+}
+
+/* お問い合わせ */
+#contact{
+    background-color: #fff;
+}
+#contact .sec-title{
+    color: #121212;
+}
+#contact .sec-title::after,
+#contact .sec-title::before{
+    background-color: #121212;
+}
+.inquiry-box {
+    display: flex;
+    gap: var(--gap);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2em;
+  }
+.inquiry-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3em 1em;
+    width: 25%;
+    border: 1px solid #121212;
+    text-decoration: none;
+    color: #121212;
+    background-color: #ffffff;
+    transition: all 0.1s ease;
+}
+.inquiry-button:hover {
+    outline: 3px solid #121212;
+}
+#contact .wrapper{
+    padding-bottom: 160px;
+}
+
+
+/* footer */
 
 
 
