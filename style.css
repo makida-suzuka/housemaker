@@ -294,6 +294,7 @@ a.feature-text span{
     margin-top: 2em;
   }
 .inquiry-button{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -305,6 +306,18 @@ a.feature-text span{
     color: #121212;
     background-color: #ffffff;
     transition: all 0.1s ease;
+}
+/* 右下三角形 */
+.inquiry-button::after{
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid #121212; /* 三角形の色 */
+
 }
 .inquiry-button:hover {
     outline: 3px solid #121212;
