@@ -25,12 +25,13 @@
     </head>
     <body>
         <div class="container">
+            <div id="overlay"></div>
             <header id="header">
                 <div class="header-contents">
                     <h1>
-                        <img src="img/logo.svg" alt="ロゴ">
+                        <a href="index.html"><img src="img/logo.svg" alt="ロゴ"></a>
                     </h1>
-                    <nav>
+                    <nav id="js-nav" class="header__nav nav">
                         <ul class="header-menu">
                             <li><a href="#">私たちについて</a></li>
                             <li><a href="#">サービス</a></li>
@@ -45,8 +46,15 @@
                             <li><a href="#">instagram</a></li>
                         </ul>
                     </nav>
+
+                    <button class="header__hamburger hamburger" id="js-hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
             </header>
+            
             <main>
                 <div id="video">
                     <video class="video-bg" src="video/video.mp4" autoplay loop muted></video>

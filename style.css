@@ -56,6 +56,9 @@ main{
 .sns-menu li{
     padding: 5px 0;
 }
+.hamburger{
+    display: none;
+}
 
 /* video background */
 #video{
@@ -359,6 +362,98 @@ footer p{
 }
 
 /* responsive */
-@media (max-width: 375px) {
-   
+@media (max-width: 960px) {
+    .container{
+        display: block;
+    }
+    #header{
+        width: 100%;
+        padding: 0;
+    }
+    .header-contents{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .hamburger{
+        display: block;
+        background-color: transparent;
+        border-color: transparent;
+        z-index: 9999;
+    }
+    .header__hamburger {
+        width: 48px;
+        height: 100%;
+      }
+
+    /* ハンバーガーメニューの線 */
+    .hamburger span {
+        width: 100%;
+        height: 1px;
+        background-color: #121212;
+        position: relative;
+        transition: ease .4s;
+        display: block;
+    }
+  
+    .hamburger span:nth-child(1) {
+        top: 0;
+    }
+  
+    .hamburger span:nth-child(2) {
+        margin: 8px 0;
+    }
+  
+    .hamburger span:nth-child(3) {
+        top: 0;
+    }
+
+  /* ハンバーガーメニュークリック後のスタイル */
+    .header__nav.active {
+        transform: translateX(0);
+    }
+  
+  .hamburger.active span:nth-child(1) {
+    top: 5px;
+    transform: rotate(45deg);
+    }
+  
+  .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+  
+  .hamburger.active span:nth-child(3) {
+    top: -13px;
+    transform: rotate(-45deg);
+    }
+
+  /*ハンバーガーメニューを右にずらして隠しておく*/
+  .header__nav {
+    padding-left: 20px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    transform: translateX(-100%);
+    background-color: #fff;
+    transition: ease .4s;
+    z-index: 1000;
+  }
+  /*開いたメニューの背景を暗くする*/
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 暗くする */
+    display: none;
+
+  }
+  #overlay.active{
+    display: block;
+  }
+
 }
