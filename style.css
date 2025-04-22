@@ -404,7 +404,7 @@ footer p{
         display: block;
         background-color: transparent;
         border-color: transparent;
-        z-index: 9999;
+        z-index: 20;
     }
     .header__hamburger {
         width: 48px;
@@ -419,6 +419,7 @@ footer p{
         position: relative;
         transition: ease .4s;
         display: block;
+        z-index: 20;
     }
   
     .hamburger span:nth-child(1) {
@@ -441,6 +442,7 @@ footer p{
   .hamburger.active span:nth-child(1) {
     top: 5px;
     transform: rotate(45deg);
+    background-color: #ffffff;
     }
   
   .hamburger.active span:nth-child(2) {
@@ -450,6 +452,7 @@ footer p{
   .hamburger.active span:nth-child(3) {
     top: -13px;
     transform: rotate(-45deg);
+    background-color: #ffffff;
     }
 
   /*ハンバーガーメニューを右にずらして隠しておく*/
@@ -464,7 +467,7 @@ footer p{
     transform: translateX(-100%);
     background-color: #fff;
     transition: ease .4s;
-    z-index: 1000;
+    z-index: 20;
   }
   /*開いたメニューの背景を暗くする*/
     #overlay {
@@ -475,6 +478,7 @@ footer p{
         height: 100%;
         background: rgba(0, 0, 0, 0.5); /* 暗くする */
         display: none;
+        z-index: 10;
     }
     #overlay.active{
         display: block;
